@@ -1,15 +1,6 @@
-var Logger = require('./logger');
-var logger = new Logger();
-logger.log('message');
-//Events using EventEmitter
-/*
-const EventEmitter = require ('events');
-const emitter = new EventEmitter();
+import Drawflow from "./Drawflow"
+import styleDrawflow from './Drawflow/dist/drawflow.min.css'
 
-emitter.on('messageLogged', function(eventArg) {
-    console.log('Listener called', eventArg);
-})
-
-emitter.emit('messageLogged',{id: 1, url: 'http://'});
-*/
-var express = require('express');
+var id = document.getElementById("drawflow");
+const editor = new Drawflow(id);
+editor.start();
